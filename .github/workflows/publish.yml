@@ -1,17 +1,24 @@
 name: Refresh and publish Creative Library
+
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'data/weekly.json'
   workflow_dispatch:
   schedule:
-    - cron: '17 13 * * 1'
+    - cron: '17 9 * * 1'
+      timezone: 'America/New_York'
+
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
+
 concurrency:
   group: creative-library-publish
   cancel-in-progress: false
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -27,6 +34,17 @@ jobs:
           python-version: '3.12'
       - name: Refresh reading feed
         run: python scripts/update_feed.py
+      - name: Preserve the weekly reading issue and keep repository active
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/weekly.json
+          if git diff --cached --quiet; then
+            git commit --allow-empty -m "chore: weekly Creative Library heartbeat"
+          else
+            git commit -m "content: refresh Creative Library reading"
+          fi
+          git push origin HEAD:main
       - name: Assemble website
         run: |
           mkdir -p _site/data
@@ -35,10 +53,22 @@ jobs:
           touch _site/.nojekyll
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
-      - name: Upload pages artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: _site
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  keepalive:
+    if: always()
+    needs: publish
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Keep scheduled publication enabled
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method PUT "repos/${GITHUB_REPOSITORY}/actions/workflows/publish.yml/enable"
