@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f3efe7" />
+  <meta name="description" content="A slow, personal creative library of architecture, design, hospitality, fashion, and cultural history, with a weekly reading issue." />
+  <title>The Creative Library — A place to keep looking</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+:root{--cream:#f3efe7;--paper:#f8f5ed;--ink:#272e26;--dim:#667063;--rule:#d1d0c6;--green:#404b3d;--mutedgreen:#76816c;--clay:#ab694f;--deep:#263327;--serif:'Libre Baskerville',Georgia,serif;--sans:'DM Sans',Arial,sans-serif;--mono:'DM Mono',monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--cream);color:var(--ink);margin:0;font:15px/1.65 var(--sans)}a{color:inherit}a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--clay);outline-offset:3px}button,input,textarea{font:inherit}.shell{width:min(1350px,calc(100% - 96px));margin-inline:auto}.site-header{border-bottom:1px solid var(--rule);background:rgba(243,239,231,.94);position:sticky;top:0;z-index:40;backdrop-filter:blur(12px)}.header-inner{display:flex;align-items:center;min-height:92px;justify-content:space-between;gap:32px}.wordmark{display:flex;align-items:center;gap:14px;color:var(--ink);text-decoration:none;font:700 11px/1.4 var(--sans);letter-spacing:1.2px}.monogram{display:grid;place-items:center;background:var(--green);color:var(--cream);width:42px;height:42px;border-radius:50%;font:26px var(--serif);letter-spacing:-3px}.monogram .dot{color:#bf8a6e}.main-nav{display:flex;align-items:center;gap:40px}.main-nav a{color:var(--ink);font-size:12px;text-decoration:none;position:relative}.main-nav a:after{content:'';position:absolute;bottom:-4px;left:0;right:100%;height:1px;background:var(--clay);transition:right .2s}.main-nav a:hover:after{right:0}.header-edition{font:10px/1.8 var(--mono);letter-spacing:1px;color:var(--dim);text-align:right}
+.hero{padding:76px 0 86px;display:grid;grid-template-columns:1.13fr .87fr;gap:62px;align-items:center}.eyebrow{font:10px/1.7 var(--mono);letter-spacing:1.5px;color:var(--clay);font-weight:500}.eyebrow.light{color:#c9b796}.accent-mark{font-size:8px;vertical-align:2px;margin-right:10px}.fine-line{display:inline-block;width:32px;border-top:1px solid var(--rule);margin:0 12px;vertical-align:4px}.hero h1{font:400 clamp(57px,6.65vw,108px)/1.08 var(--serif);letter-spacing:-5.8px;margin:36px 0 28px}.hero h1 em,.section h2 em,.prompt-grid h2 em{font-weight:400;color:var(--clay)}.hero p{max-width:510px;font-size:18px;line-height:1.75;color:#4f594f;margin:0 0 36px}.hero-actions{display:flex;align-items:center;gap:32px;flex-wrap:wrap}.primary-button{background:var(--green);color:#fff!important;border:1px solid var(--green);border-radius:2px;display:inline-flex;gap:32px;align-items:center;justify-content:space-between;text-decoration:none;padding:14px 19px;font-size:12px;font-weight:600;cursor:pointer}.primary-button:hover{background:#29372b}.text-link{font-size:12px;text-decoration:none;border-bottom:1px solid var(--dim);padding:0 0 5px}.hero-art{padding:0 20px 0 0}.art-frame{background:#cab59d;border:1px solid #b29b7d;aspect-ratio:1.05;position:relative;overflow:hidden;box-shadow:18px 18px 0 #ddd8ca}.frame-label{font:9px/1.75 var(--mono);letter-spacing:2px;color:#6f4934;position:absolute;top:29px;left:30px;z-index:3}.sun{position:absolute;width:45%;aspect-ratio:1;border-radius:50%;background:#b86e4d;top:14%;right:12%;opacity:.84}.arch{position:absolute;width:49%;height:80%;background:#5d6957;bottom:0;left:26%;border-radius:48% 48% 0 0 / 28% 28% 0 0;box-shadow:-27px 0 0 #88866d,27px 0 0 #b2a386}.arch-inner{position:absolute;left:27%;width:46%;top:30%;height:76%;background:#263b37;border-radius:48% 48% 0 0/23% 23% 0 0;box-shadow:inset 9px 0 0 #34514a}.art-foot{position:absolute;bottom:23px;left:31px;font:10px var(--mono);letter-spacing:1px;color:#f0e7d9;z-index:2}.art-foot span{opacity:.7}.art-caption{font:9px var(--mono);letter-spacing:1px;margin:32px 0 0;color:var(--dim)}
+.ticker{border-block:1px solid var(--rule);background:#ede8df}.ticker-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:55px;font:10px var(--mono);letter-spacing:1.6px}.ticker-star{color:var(--clay);font-size:14px}.section{padding:93px 0 96px;scroll-margin-top:92px}.section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:28px}.section h2,.prompt-grid h2{font:400 clamp(33px,4.6vw,58px)/1.23 var(--serif);letter-spacing:-2.5px;margin:13px 0 0}.edition-meta{display:flex;flex-direction:column;gap:5px;text-align:right;font:10px var(--mono);letter-spacing:1px;color:var(--dim)}.edition-meta span:first-child{color:var(--clay)}.intro-row{margin:29px 0 36px;display:flex;align-items:end;justify-content:space-between;gap:30px}.intro-row p,.section-subtitle{max-width:650px;margin:0;font-size:15px;line-height:1.85;color:var(--dim)}.small-kicker{font:10px var(--mono);letter-spacing:1px;white-space:nowrap;color:var(--dim)}.live-dot{background:#7b9969;box-shadow:0 0 0 4px #e2e9da;display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:13px}.featured-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.article-card{border:1px solid var(--rule);background:var(--paper);min-height:360px;padding:30px 28px 27px;display:flex;flex-direction:column;transition:transform .2s,background .2s}.article-card:hover{transform:translateY(-3px);background:#fffdf8}.article-card.primary-article{grid-column:span 2;background:#e4e5d9}.article-card.primary-article h3{font-size:clamp(26px,3vw,39px);max-width:680px}.article-top{display:flex;justify-content:space-between;align-items:center;gap:16px;font:10px var(--mono);letter-spacing:.8px;color:var(--dim);text-transform:uppercase}.number{font:24px var(--serif);color:var(--clay)}.article-card h3{font:400 23px/1.36 var(--serif);letter-spacing:-.8px;margin:26px 0 14px}.article-card p{color:var(--dim);font-size:13px;line-height:1.78;margin:0 0 27px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}.article-card a{font-size:12px;margin-top:auto;text-decoration:none;font-weight:600;display:flex;justify-content:space-between;border-top:1px solid var(--rule);padding-top:18px}.article-card a:hover{color:var(--clay)}.loading-card{grid-column:1/-1;border:1px solid var(--rule);min-height:190px;padding:42px;color:var(--dim);background:#e9e8de}.loading-card a{color:var(--green);font-weight:600}.section-footer{padding-top:21px;display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:11px;color:var(--dim)}.section-footer a{color:var(--ink);font-weight:600;text-decoration:none}.section-footer a:hover{text-decoration:underline}
+.prompt-band{background:#324234;color:#f7f5ed;scroll-margin-top:92px}.prompt-grid{padding-top:76px;padding-bottom:76px;display:grid;grid-template-columns:1fr .98fr;gap:78px;align-items:center}.prompt-grid h2{max-width:500px;font-size:clamp(34px,4vw,50px)}.prompt-grid h2 em{color:#c6a78b}.prompt-grid>div>p{max-width:430px;font-size:15px;line-height:1.8;color:#d2d8cf;margin:20px 0 0}.prompt-card{border:1px solid #96a28f;padding:30px;background:rgba(255,255,255,.035);min-height:270px}.prompt-card-top{display:flex;justify-content:space-between;gap:10px;font:10px var(--mono);letter-spacing:1px;color:#c5cabf}.prompt-card h3{font:400 29px/1.3 var(--serif);margin:30px 0 12px;color:#fff}.prompt-card>p{color:#dbe0d7;font-size:13px;line-height:1.8;min-height:50px}.prompt-bottom{border-top:1px solid #708070;margin-top:24px;padding-top:18px;display:flex;align-items:center;justify-content:space-between;gap:12px}.prompt-bottom a,.ghost-button{color:#fff;font-size:11px;text-decoration:none}.ghost-button{background:none;border:0;padding:0;cursor:pointer}.ghost-button:hover,.prompt-bottom a:hover{text-decoration:underline}
+.library-section .section-subtitle{margin:24px 0 34px}.shelf-count{font:10px var(--mono);letter-spacing:1px;color:var(--dim)}.controls{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;border-block:1px solid var(--rule);padding:18px 0;margin:36px 0 22px}.filter-tabs{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.filter{background:transparent;color:var(--dim);padding:8px 13px;border:1px solid transparent;font-size:11px;border-radius:2px;cursor:pointer}.filter:hover{color:var(--green);border-color:var(--rule)}.filter.active{color:#fff;background:var(--green);border-color:var(--green)}.search-wrap{position:relative}.search-wrap input{width:216px;padding:10px 35px 10px 12px;background:transparent;border:1px solid var(--rule);outline-offset:1px;font-size:12px}.search-wrap>span:not(.sr-only){position:absolute;right:13px;top:3px;font-size:23px;color:var(--dim)}.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.resource-card{border:1px solid var(--rule);background:#f7f4ed;display:flex;flex-direction:column;min-height:280px;padding:22px 24px 20px}.resource-top{display:flex;justify-content:space-between;align-items:center;color:var(--clay);font:10px var(--mono);letter-spacing:.6px;text-transform:uppercase}.save-button{background:transparent;border:0;font-size:23px;line-height:1;color:#8b9386;cursor:pointer}.save-button.saved{color:var(--clay)}.resource-card h3{font:400 23px/1.35 var(--serif);letter-spacing:-.7px;margin:23px 0 9px}.resource-description{color:var(--dim);font-size:12px;line-height:1.72;margin:0 0 22px}.resource-exercise{margin-top:auto;padding:13px 0;border-top:1px solid var(--rule);color:#566257;font-size:12px;line-height:1.7}.resource-exercise strong{display:block;font:9px var(--mono);letter-spacing:1px;color:var(--clay);margin-bottom:5px}.resource-card>a{text-decoration:none;color:var(--green);font-weight:700;font-size:11px;margin:9px 0 0}.resource-card>a:hover{text-decoration:underline}.notes-disclaimer{font-size:11px;color:var(--dim);margin-top:22px}.empty-results{padding:28px;grid-column:1/-1;background:#e8e9e0;color:var(--dim)}
+.trail-wrap{background:#eae7dd}.trails-section{padding-top:87px;padding-bottom:100px}.trails-grid{margin-top:36px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.trail{border:1px solid #d2cdbf;background:#f4f0e8;display:flex;flex-direction:column;min-height:490px}.trail>span{font:10px var(--mono);letter-spacing:1px;color:var(--dim);padding:19px 20px}.trail-art{height:190px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.trail-art>span{position:relative;z-index:2}.trail.one .trail-art{background:repeating-linear-gradient(90deg,#9b9d85 0 4px,#657665 4px 7px);color:#fff3da}.trail.one .trail-art span{font:66px var(--serif);letter-spacing:-6px;transform:rotate(-8deg)}.trail.two .trail-art{background:#b8a28b}.trail.two .trail-art:before{content:'';position:absolute;width:58%;height:110%;bottom:-16px;background:#745847;border-radius:52% 52% 0 0/25% 25% 0 0}.trail.two .trail-art span{font:36px var(--serif);color:#f6e9d6;letter-spacing:6px}.trail.three .trail-art{background:#cfbf9e}.trail.three .trail-art span{font:bold italic 100px var(--serif);color:#963d35;transform:rotate(-8deg)}.trail.four .trail-art{background:#b2b7aa}.trail.four .trail-art span{font:68px var(--sans);font-weight:700;letter-spacing:-11px;color:#f4f0e6}.trail-bottom{padding:20px 20px 24px;display:flex;flex-direction:column;flex:1}.trail-bottom h3{font:400 19px/1.35 var(--serif);margin:0 0 10px}.trail-bottom p{font:12px/1.8 var(--sans);color:var(--dim);margin:0 0 16px}.trail-bottom a{font-size:11px;margin-top:auto;font-weight:700;text-decoration:none;color:var(--green)}.trail-bottom a:hover{text-decoration:underline}
+.notebook-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;padding-top:35px}.notebook-description p{max-width:385px;font-size:16px;color:var(--dim);line-height:1.85;margin-top:0}.notebook-rules{display:flex;flex-direction:column;gap:16px;margin-top:34px;padding-top:28px;border-top:1px solid var(--rule);font:11px var(--mono);color:var(--dim)}.notebook-form{background:#ebe7dc;padding:28px;border:1px solid var(--rule);display:flex;flex-direction:column;gap:10px}.notebook-form label{font:10px var(--mono);letter-spacing:1px;color:var(--clay);margin-top:11px}.notebook-form input,.notebook-form textarea{background:#faf8f0;border:1px solid #cecec4;padding:13px;font-size:13px;border-radius:0;color:var(--ink);resize:vertical;min-width:0}.notebook-form textarea{line-height:1.7}.notebook-buttons{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin-top:12px}.line-button{background:transparent;border:0;border-bottom:1px solid var(--green);padding:9px 0;font-size:12px;color:var(--green);cursor:pointer}.form-status{font-size:11px;color:var(--dim);margin:0;min-height:16px}.saved-notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:26px}.note-card{padding:23px;border:1px solid var(--rule);background:#f8f5ef}.note-card h3{font:20px var(--serif);margin:0 0 11px}.note-card p{white-space:pre-wrap;color:var(--dim);font-size:12px;line-height:1.8;margin:0 0 20px}.note-meta{font:10px var(--mono);color:var(--clay);letter-spacing:.5px}.delete-note{float:right;border:0;background:transparent;color:var(--dim);cursor:pointer;font-size:11px}.delete-note:hover{color:#b34532}.site-footer{background:#263428;color:#eff1e9}.footer-inner{padding:50px 0;display:grid;grid-template-columns:1fr 1fr auto;align-items:center;gap:25px}.footer-brand{font:400 29px/1.1 var(--serif);letter-spacing:-1.3px}.footer-brand span{font:10px var(--mono);vertical-align:top;margin-left:6px}.footer-inner p{font:13px var(--sans);margin:0 0 7px;color:#dbe2d8}.footer-inner small{font:10px var(--mono);letter-spacing:.4px;color:#9dab9f}.footer-inner a{color:#f3f4ea;text-decoration:none;font:10px var(--mono);letter-spacing:1px}.footer-inner a:hover{text-decoration:underline}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:1050px){.shell{width:min(1350px,calc(100% - 60px))}.main-nav{gap:20px}.header-edition{display:none}.hero{gap:35px}.hero h1{font-size:70px}.trails-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.trail{min-height:430px}.trail-art{height:170px}.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:750px){.shell{width:min(100% - 36px,650px)}.site-header{position:relative}.header-inner{min-height:76px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px;gap:12px}.main-nav{width:100%;gap:21px;justify-content:flex-start;overflow-x:auto;white-space:nowrap;padding-bottom:3px}.main-nav a{font-size:11px}.hero{grid-template-columns:1fr;padding:57px 0 65px;gap:48px}.hero h1{font-size:clamp(49px,11vw,75px);letter-spacing:-3.6px;margin:21px 0}.hero p{font-size:16px}.hero-art{max-width:470px;padding-right:18px}.ticker-inner{min-height:48px;justify-content:center}.ticker-inner span:nth-child(n+4){display:none}.ticker-inner span{font-size:9px}.section{padding-top:65px;padding-bottom:67px;scroll-margin-top:0}.section h2,.prompt-grid h2{font-size:clamp(32px,9vw,46px);letter-spacing:-1.8px}.section-heading{align-items:start}.edition-meta,.shelf-count{font-size:9px}.intro-row{display:block}.small-kicker{margin-top:22px}.featured-grid{grid-template-columns:1fr}.article-card.primary-article{grid-column:auto}.article-card{min-height:300px}.article-card.primary-article h3{font-size:27px}.section-footer{align-items:start;flex-direction:column}.prompt-grid{grid-template-columns:1fr;gap:33px;padding-top:64px;padding-bottom:64px}.resource-grid,.saved-notes{grid-template-columns:1fr}.resource-card{min-height:240px}.trails-grid{grid-template-columns:1fr 1fr}.notebook-grid{grid-template-columns:1fr;gap:20px}.notebook-rules{margin-top:24px}.footer-inner{grid-template-columns:1fr;gap:20px}.controls{align-items:stretch}.search-wrap,.search-wrap input{width:100%}}
+@media(max-width:490px){.hero-actions{flex-direction:column;align-items:flex-start;gap:20px}.hero-art{padding-right:15px}.trails-grid{grid-template-columns:1fr}.trail{min-height:0}.trail-art{height:210px}.section-heading{flex-direction:column;gap:15px}.edition-meta{text-align:left}.featured-grid{gap:10px}.prompt-bottom{align-items:start;flex-direction:column}.filter-tabs{gap:2px}.filter{padding:8px 10px}.notebook-form{padding:18px}.footer-brand{font-size:26px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important}}
+
+</style>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%233a4236'/%3E%3Ctext x='50%25' y='53%25' fill='%23f3efe7' font-family='Georgia' font-size='40' text-anchor='middle' dominant-baseline='middle'%3EC%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#top" aria-label="The Creative Library, back to top"><span class="monogram">C<span class="dot">.</span></span><span>THE CREATIVE<br/>LIBRARY</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#weekly">This week</a><a href="#library">The library</a><a href="#trails">Rabbit holes</a><a href="#notebook">Field notes</a>
+      </nav>
+      <span class="header-edition">AN INDEPENDENT<br/>CREATIVE PRACTICE</span>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="accent-mark">●</span> A PERSONAL RESEARCH ROOM <span class="fine-line"></span> EST. 2026</div>
+        <h1>A place to<br/><em>keep looking.</em></h1>
+        <p>An ever-growing index of architecture, interiors, graphic culture, hospitality, and the things we find beautiful without quite knowing why.</p>
+        <div class="hero-actions"><a class="primary-button" href="#weekly">Explore this week <span aria-hidden="true">↗</span></a><a class="text-link" href="#library">Open the reference library <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-frame"><span class="frame-label">STUDIES IN<br/>ATMOSPHERE</span><div class="sun"></div><div class="arch"><div class="arch-inner"></div></div><div class="art-foot">01 <span> / </span> FORM & FEELING</div></div>
+        <div class="art-caption">A STUDY IN FINDING MEANING IN THE EVERYDAY&nbsp; — &nbsp;№ 001</div>
+      </div>
+    </section>
+    <section class="ticker">
+      <div class="shell ticker-inner"><span>LOOK CLOSER</span><span class="ticker-star">✳</span><span>ASK BETTER QUESTIONS</span><span class="ticker-star">✳</span><span>COLLECT WITH INTENTION</span><span class="ticker-star">✳</span><span>MAKE CONNECTIONS</span></div>
+    </section>
+    <section id="weekly" class="shell section weekly-section">
+      <div class="section-heading"><div><div class="eyebrow">01 / WEEKLY DISPATCH</div><h2>New things to <em>notice.</em></h2></div><div class="edition-meta"><span id="issueNumber">ISSUE —</span><span id="lastUpdated">Waiting for first refresh</span></div></div>
+      <div class="intro-row"><p>Fresh stories from independent design and architecture publications, refreshed by a scheduled collection every Monday. Open anything that catches your eye, then follow the thread.</p><div class="small-kicker"><span class="live-dot"></span> PUBLICATION FEED</div></div>
+      <div class="featured-grid" id="featuredGrid"><div class="loading-card">The first reading issue will appear here after the site is deployed and its first feed refresh runs.<br/><br/><a href="https://www.wallpaper.com/" target="_blank" rel="noopener noreferrer">Start reading Wallpaper* ↗</a></div></div>
+      <div class="section-footer"><span id="feedStatus" role="status">Feeds are collected from publishers; article availability depends on their RSS feeds.</span><a href="#library">Explore the permanent library <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <section class="prompt-band" id="prompt">
+      <div class="shell prompt-grid">
+        <div><div class="eyebrow light">02 / ONE SMALL EXERCISE</div><h2>Become a better <em>observer.</em></h2><p>A new research prompt every week. No polished outcome required; just get more precise about what you see.</p></div>
+        <div class="prompt-card"><div class="prompt-card-top"><span id="promptIndex">PROMPT 01 / 12</span><span id="promptWeek">THIS WEEK</span></div><h3 id="promptTitle">The anatomy of a room</h3><p id="promptDescription">Pick a space that stays with you and name the details that create its atmosphere.</p><div class="prompt-bottom"><button id="copyPrompt" class="ghost-button" type="button">Copy this prompt <span aria-hidden="true">↗</span></button><a href="#notebook">Write field notes ↗</a></div></div>
+      </div>
+    </section>
+    <section id="library" class="shell section library-section">
+      <div class="section-heading"><div><div class="eyebrow">03 / THE REFERENCE SHELF</div><h2>For the <em>curious.</em></h2></div><span class="shelf-count" id="resourceCount">22 PERMANENT RESOURCES</span></div>
+      <p class="section-subtitle">A permanent collection: digital archives, magazines, architectural references, and books worth returning to.</p>
+      <div class="controls"><div class="filter-tabs" id="filterTabs" aria-label="Filter resources"><button class="filter active" data-category="All" type="button">All</button><button class="filter" data-category="Archives" type="button">Archives</button><button class="filter" data-category="Architecture" type="button">Architecture</button><button class="filter" data-category="Magazines" type="button">Magazines</button><button class="filter" data-category="Books" type="button">Books</button><button class="filter" data-category="Research tools" type="button">Research tools</button><button class="filter" data-category="Saved" type="button">Saved ☆</button></div><label class="search-wrap"><span class="sr-only">Search the resource library</span><input id="resourceSearch" type="search" placeholder="Search the shelves…" autocomplete="off"/><span aria-hidden="true">⌕</span></label></div>
+      <div class="resource-grid" id="resourceGrid"></div>
+      <div class="notes-disclaimer">☆ Save resources on this device. Saved items and field notes stay in your browser, not in an online account.</div>
+    </section>
+    <section id="trails" class="trail-wrap">
+      <div class="shell section trails-section"><div class="section-heading"><div><div class="eyebrow">04 / CURATED RABBIT HOLES</div><h2>Follow a <em>feeling.</em></h2></div><span class="shelf-count">FOUR STARTING POINTS</span></div>
+      <div class="trails-grid">
+        <article class="trail one"><span>FIELD STUDY / 01</span><div class="trail-art"><span>1974</span></div><div class="trail-bottom"><h3>American academia</h3><p>University seals, oak-paneled libraries, team uniforms, campus typography, and the invention of nostalgia.</p><a href="https://digitalcollections.nypl.org/" target="_blank" rel="noopener noreferrer">Begin in the archive ↗</a></div></article>
+        <article class="trail two"><span>FIELD STUDY / 02</span><div class="trail-art"><span>HOTEL</span></div><div class="trail-bottom"><h3>The hotel as theater</h3><p>Lobby rituals, dining rooms, matchbooks, uniforms, and the architecture of arrival.</p><a href="https://www.metmuseum.org/art/collection" target="_blank" rel="noopener noreferrer">Find historical references ↗</a></div></article>
+        <article class="trail three"><span>FIELD STUDY / 03</span><div class="trail-art"><span>Aa</span></div><div class="trail-bottom"><h3>Forgotten graphic identities</h3><p>Airlines, rail travel, civic wayfinding, university marks, and the vanished elegance of print.</p><a href="https://archive.org/" target="_blank" rel="noopener noreferrer">Explore old print ↗</a></div></article>
+        <article class="trail four"><span>FIELD STUDY / 04</span><div class="trail-art"><span>RE—</span></div><div class="trail-bottom"><h3>Second lives of buildings</h3><p>Former factories, schools, post offices, and banks remade as places with new meaning.</p><a href="https://divisare.com/" target="_blank" rel="noopener noreferrer">Explore spatial transformations ↗</a></div></article>
+      </div></div>
+    </section>
+    <section id="notebook" class="shell section notebook-section">
+      <div class="section-heading"><div><div class="eyebrow">05 / YOUR PRIVATE FIELD NOTES</div><h2>Keep the <em>thread.</em></h2></div><span class="shelf-count">A WORKING NOTEBOOK</span></div>
+      <div class="notebook-grid"><div class="notebook-description"><p>Save your observations, fragments, questions, and ideas as you go. Your notes live in this browser. Export them anytime to keep a separate copy.</p><div class="notebook-rules"><span>01 &nbsp; What caught your attention?</span><span>02 &nbsp; Why did it resonate?</span><span>03 &nbsp; What does it connect to?</span></div></div><div class="notebook-form"><label for="noteTitle">ENTRY TITLE</label><input id="noteTitle" maxlength="100" placeholder="A room, a detail, a feeling…"/><label for="noteBody">YOUR OBSERVATIONS</label><textarea id="noteBody" placeholder="Start anywhere. What are you noticing?" rows="6"></textarea><div class="notebook-buttons"><button class="primary-button" id="saveNote" type="button">Save field note <span aria-hidden="true">↗</span></button><button class="line-button" id="exportNotes" type="button">Export notes ↓</button></div><p class="form-status" id="noteStatus" role="status"></p></div></div>
+      <div class="saved-notes" id="savedNotes"></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><div class="footer-brand">THE CREATIVE<br/>LIBRARY<span>®</span></div><div><p>A personal index for discovering what makes things matter.</p><small>Slow looking / deeper curiosity / deliberate collection</small></div><a href="#top">BACK TO TOP ↑</a></div></footer>
+  <script>
+window.CREATIVE_RESOURCES = [
+  {
+    "id": "r01",
+    "name": "Are.na",
+    "category": "Research tools",
+    "description": "An open-ended space for linking visual references, texts, and ideas.",
+    "exercise": "Build a channel around one unlikely pairing, such as hotel stationery and collegiate identity.",
+    "url": "https://www.are.na/"
+  },
+  {
+    "id": "r02",
+    "name": "NYPL Digital Collections",
+    "category": "Archives",
+    "description": "Historical maps, photographs, prints, and ephemera from New York.",
+    "exercise": "Research one vanished New York hotel or neighborhood and save five telling artifacts.",
+    "url": "https://digitalcollections.nypl.org/"
+  },
+  {
+    "id": "r03",
+    "name": "The Met Collection",
+    "category": "Archives",
+    "description": "Artworks and decorative objects spanning centuries and continents.",
+    "exercise": "Trace one furniture style from its original context to a contemporary interior.",
+    "url": "https://www.metmuseum.org/art/collection"
+  },
+  {
+    "id": "r04",
+    "name": "Getty Publications",
+    "category": "Archives",
+    "description": "Art-history books and exhibition catalogues, including free digital publications.",
+    "exercise": "Choose a book on a period you barely know and write down three useful visual motifs.",
+    "url": "https://www.getty.edu/publications/"
+  },
+  {
+    "id": "r05",
+    "name": "Google Arts & Culture",
+    "category": "Archives",
+    "description": "Museum collections, exhibitions, and stories in one exploratory interface.",
+    "exercise": "Follow a color or material through at least three historical periods.",
+    "url": "https://artsandculture.google.com/explore"
+  },
+  {
+    "id": "r06",
+    "name": "Internet Archive",
+    "category": "Archives",
+    "description": "Books, print ephemera, magazines, and historical media.",
+    "exercise": "Look for a vintage hotel brochure or magazine advertisement and analyze its typography.",
+    "url": "https://archive.org/"
+  },
+  {
+    "id": "r07",
+    "name": "Arts & Architecture",
+    "category": "Archives",
+    "description": "A celebrated archive of midcentury architectural thinking and criticism.",
+    "exercise": "Choose a Case Study House and note what still feels modern.",
+    "url": "https://www.artsandarchitecture.com/"
+  },
+  {
+    "id": "r08",
+    "name": "Divisare",
+    "category": "Architecture",
+    "description": "A deliberate, photography-led archive of buildings and architects.",
+    "exercise": "Study a single project through 10 images before reading any description.",
+    "url": "https://divisare.com/"
+  },
+  {
+    "id": "r09",
+    "name": "ArchDaily",
+    "category": "Architecture",
+    "description": "New buildings, project documentation, drawings, and architectural reporting.",
+    "exercise": "Compare two adaptive-reuse projects and sketch their different approaches.",
+    "url": "https://www.archdaily.com/"
+  },
+  {
+    "id": "r10",
+    "name": "Domus",
+    "category": "Architecture",
+    "description": "Architecture and design as part of a wider cultural conversation.",
+    "exercise": "Read one critical essay and identify the author’s central argument.",
+    "url": "https://www.domusweb.it/"
+  },
+  {
+    "id": "r11",
+    "name": "designboom",
+    "category": "Architecture",
+    "description": "New work across architecture, product design, and visual culture.",
+    "exercise": "Find a recent project worth borrowing one material idea from.",
+    "url": "https://www.designboom.com/"
+  },
+  {
+    "id": "r12",
+    "name": "Wallpaper*",
+    "category": "Magazines",
+    "description": "Contemporary interiors, architecture, fashion, and design.",
+    "exercise": "Study how a single feature builds a world through photography and copy.",
+    "url": "https://www.wallpaper.com/"
+  },
+  {
+    "id": "r13",
+    "name": "Apartamento",
+    "category": "Magazines",
+    "description": "An everyday-life interiors magazine about character and lived experience.",
+    "exercise": "Find an interior you love that would never appear in a luxury showroom. Why?",
+    "url": "https://www.apartamentomagazine.com/"
+  },
+  {
+    "id": "r14",
+    "name": "Monocle",
+    "category": "Magazines",
+    "description": "Cities, urban culture, hospitality, independent businesses, and design.",
+    "exercise": "Find one neighborhood business and explain how it contributes to its street.",
+    "url": "https://monocle.com/"
+  },
+  {
+    "id": "r15",
+    "name": "Magazine B",
+    "category": "Magazines",
+    "description": "Long-form examinations of brand identity and how brands are experienced.",
+    "exercise": "Take one brand and map its vocabulary, materials, rituals, and audience.",
+    "url": "https://www.magazine-b.com/"
+  },
+  {
+    "id": "r16",
+    "name": "It's Nice That",
+    "category": "Magazines",
+    "description": "Creative practice, visual communication, image-making, and emerging talent.",
+    "exercise": "Choose an artist and find three earlier influences on their current work.",
+    "url": "https://www.itsnicethat.com/"
+  },
+  {
+    "id": "r17",
+    "name": "Design Observer",
+    "category": "Magazines",
+    "description": "Design criticism and essays on the culture surrounding designed things.",
+    "exercise": "Write five sentences in response to an essay you disagree with.",
+    "url": "https://designobserver.com/"
+  },
+  {
+    "id": "r18",
+    "name": "Ways of Seeing",
+    "category": "Books",
+    "description": "John Berger · A concise, foundational inquiry into how we look at images.",
+    "exercise": "Choose an advertisement and describe how its visual language shapes desire.",
+    "url": "https://search.worldcat.org/search?q=Ways+of+Seeing+John+Berger"
+  },
+  {
+    "id": "r19",
+    "name": "The Image of the City",
+    "category": "Books",
+    "description": "Kevin Lynch · How urban environments become legible and memorable.",
+    "exercise": "Draw a map of your neighborhood from memory: paths, edges, landmarks, nodes.",
+    "url": "https://search.worldcat.org/search?q=The+Image+of+the+City+Kevin+Lynch"
+  },
+  {
+    "id": "r20",
+    "name": "A Pattern Language",
+    "category": "Books",
+    "description": "Christopher Alexander et al. · Recurring patterns that make places feel human.",
+    "exercise": "Document one pattern that makes your favorite café comfortable.",
+    "url": "https://search.worldcat.org/search?q=A+Pattern+Language+Christopher+Alexander"
+  },
+  {
+    "id": "r21",
+    "name": "Delirious New York",
+    "category": "Books",
+    "description": "Rem Koolhaas · A provocative reading of Manhattan’s built imagination.",
+    "exercise": "Find an idea in the book that changes how you see a New York landmark.",
+    "url": "https://search.worldcat.org/search?q=Delirious+New+York+Rem+Koolhaas"
+  },
+  {
+    "id": "r22",
+    "name": "The Creative Act",
+    "category": "Books",
+    "description": "Rick Rubin · A reflective approach to making, noticing, and openness.",
+    "exercise": "Write down ten things that caught your attention today without judging them.",
+    "url": "https://search.worldcat.org/search?q=The+Creative+Act+Rick+Rubin"
+  }
+];
+
+</script>
+  <script>
+(() => {
+  'use strict';
+  const RESOURCES = Array.isArray(window.CREATIVE_RESOURCES) ? window.CREATIVE_RESOURCES : [];
+  const $ = id => document.getElementById(id);
+  const PROMPTS = [
+    ['The anatomy of a room','Choose one room that stays with you. Name five details that create its atmosphere: light, objects, materials, sounds, and rituals.'],
+    ['One object, five histories','Find a chair, matchbook, hotel key, or magazine cover. Trace its design to at least two earlier influences.'],
+    ['A city from memory','Draw a small map of your neighborhood without looking at a map. Which corners, paths, and signs remain most vivid?'],
+    ['A letter from another decade','Find a vintage advertisement or travel brochure. Write a new one in its visual and verbal style, then note what changed.'],
+    ['A ritual of arrival','Study the first five minutes of entering a café, bookstore, hotel, or museum. What is choreographed? What feels accidental?'],
+    ['Make a visual family tree','Start with a building you love. Find three older spaces that might share its material, proportion, or mood.'],
+    ['An atlas of one color','Collect ten examples of the same color in unrelated contexts. Explain why it communicates differently in each.'],
+    ['What makes it timeless?','Choose a brand or space you consider timeless. Identify the specific decisions that keep it from feeling dated.'],
+    ['A neighborhood institution','Observe an independent business. How do its signage, rituals, staff, and regulars create an identity?'],
+    ['Material intelligence','Choose a material: wood, brass, tile, stone, or linen. Research how it ages and what it communicates.'],
+    ['An imagined hotel lobby','Assemble ten references for an imaginary hotel. Give it a city, decade, audience, and distinct point of view.'],
+    ['The better question','Pick an image that you instinctively love. Instead of saying it is beautiful, ask five increasingly specific questions about why.']
+  ];
+  const safeGet = (key, fallback) => {
+    try { const v = JSON.parse(localStorage.getItem(key)); return v == null ? fallback : v; } catch { return fallback; }
+  };
+  const safeSet = (key, val) => {
+    try { localStorage.setItem(key, JSON.stringify(val)); return true; } catch { return false; }
+  };
+  const dateFmt = date => {
+    try { return new Date(date).toLocaleDateString('en-US', {month:'short',day:'numeric',year:'numeric'}); } catch { return ''; }
+  };
+  const weekNumber = date => {
+    const d = new Date(Date.UTC(date.getFullYear(),date.getMonth(),date.getDate()));
+    d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
+    const jan1 = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+    return Math.ceil((((d - jan1)/86400000)+1)/7);
+  };
+  const truncate = (s, n) => { s = String(s || ''); return s.length > n ? s.slice(0,n-1).trim()+'…' : s; };
+  const validUrl = (s) => { try { const x = new URL(s); return ['https:','http:'].includes(x.protocol) ? x.href : null; } catch {return null;} };
+  const make = (tag, klass, text) => {const el=document.createElement(tag); if(klass)el.className=klass; if(text!=null)el.textContent=text;return el;};
+  const addExternal = (el, url) => { const clean=validUrl(url); if(clean){el.href=clean;el.target='_blank';el.rel='noopener noreferrer';} };
+  const storedFavorites = safeGet('creativeLibraryFavoritesV1', []);
+  const savedIds = new Set((Array.isArray(storedFavorites)?storedFavorites:[]).filter(x=>typeof x==='string'));
+  let filter = 'All';
+  function renderResources(){
+    const term=$('resourceSearch').value.toLowerCase().trim();
+    const list=RESOURCES.filter(r=>
+      (filter==='All'||(filter==='Saved'?savedIds.has(r.id):r.category===filter)) &&
+      (`${r.name} ${r.category} ${r.description} ${r.exercise}`.toLowerCase().includes(term))
+    );
+    const grid=$('resourceGrid'); grid.replaceChildren();
+    $('resourceCount').textContent=`${RESOURCES.length} PERMANENT RESOURCES`;
+    if(!list.length){grid.append(make('div','empty-results','No resources match that search. Try a different term or category.'));return;}
+    for(const r of list){
+      const card=make('article','resource-card');
+      const top=make('div','resource-top');top.append(make('span','',r.category));
+      const save=make('button','save-button'+(savedIds.has(r.id)?' saved':''),savedIds.has(r.id)?'★':'☆');
+      save.type='button';save.title=savedIds.has(r.id)?'Remove from saved':'Save for later';save.setAttribute('aria-label',save.title);
+      save.addEventListener('click',()=>{savedIds.has(r.id)?savedIds.delete(r.id):savedIds.add(r.id);safeSet('creativeLibraryFavoritesV1',[...savedIds]);renderResources();});
+      top.append(save);card.append(top);
+      card.append(make('h3','',r.name));card.append(make('p','resource-description',r.description));
+      const study=make('div','resource-exercise');study.append(make('strong','','TRY THIS'));study.append(document.createTextNode(r.exercise));card.append(study);
+      const link=make('a','','Visit resource ↗');addExternal(link,r.url);card.append(link);grid.append(card);
+    }
+  }
+  $('resourceSearch').addEventListener('input',renderResources);
+  document.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>{
+    filter=button.dataset.category;
+    document.querySelectorAll('[data-category]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});
+    renderResources();
+  }));
+  renderResources();
+  const now = new Date();
+  const number=weekNumber(now),selected=PROMPTS[(number-1)%PROMPTS.length];
+  $('promptIndex').textContent=`PROMPT ${String((number-1)%PROMPTS.length+1).padStart(2,'0')} / 12`;
+  $('promptWeek').textContent=`WEEK ${number}`;
+  $('promptTitle').textContent=selected[0];$('promptDescription').textContent=selected[1];
+  $('issueNumber').textContent=`ISSUE ${String(number).padStart(2,'0')} / ${now.getFullYear()}`;
+  $('copyPrompt').addEventListener('click',async()=>{
+    const v=`THE CREATIVE LIBRARY — WEEK ${number}\n${selected[0]}\n\n${selected[1]}`;
+    try{await navigator.clipboard.writeText(v);$('copyPrompt').textContent='Copied ✓';}
+    catch{$('copyPrompt').textContent='Copy unavailable. Select the prompt above.';}
+  });
+  function renderArticles(data){
+    const grid=$('featuredGrid');grid.replaceChildren();
+    const articles=Array.isArray(data.articles)?data.articles.slice(0,9):[];
+    if(data.updated_at){
+      $('lastUpdated').textContent=`Updated ${dateFmt(data.updated_at)}`;
+    } else { $('lastUpdated').textContent='Awaiting first publication'; }
+    if(!articles.length){
+      const starters=[
+        {source:'Divisare',category:'Architecture',title:'Begin with an architecture archive',summary:'Slow down with one project. Look at the photographs before you read the text, then note its materials, light, and atmosphere.',url:'https://divisare.com/'},
+        {source:'NYPL Digital Collections',category:'History & archives',title:'Explore the visual history of New York',summary:'Old maps, interiors, advertisements, and photographs can reveal the cultural histories behind today’s spaces.',url:'https://digitalcollections.nypl.org/'},
+        {source:'Magazine B',category:'Brand culture',title:'Study a brand as a complete world',summary:'Think beyond logos: objects, language, ritual, packaging, environment, and why an identity feels coherent.',url:'https://www.magazine-b.com/'}
+      ];
+      articles.push(...starters);
+      $('feedStatus').textContent='Starter reading picks, not live articles. The first RSS issue publishes after deployment.';
+    } else {
+      $('feedStatus').textContent=`${articles.length} stories · ${data.source_count||'Multiple'} sources · Linked to original publishers. ${data.source_status==='partial'?'Some feeds were unavailable during this refresh.':''}`;
+    }
+    articles.forEach((a,i)=>{
+      const card=make('article','article-card'+(i===0?' primary-article':''));
+      const top=make('div','article-top');
+      top.append(make('span','',`${a.category||'Ideas'} / ${a.source||'Publication'}`));top.append(make('span','number',String(i+1).padStart(2,'0')));card.append(top);
+      card.append(make('h3','',a.title||'Untitled article'));card.append(make('p','',truncate(a.summary||'Discover a new perspective on contemporary design and culture.',260)));
+      const link=make('a','','Read the story');link.append(make('span','','↗'));addExternal(link,a.url);card.append(link);grid.append(card);
+    });
+  }
+  fetch('./data/weekly.json?date='+(new Date().getUTCDate()), {cache:'no-store'})
+    .then(response=>{if(!response.ok)throw new Error('HTTP '+response.status);return response.json();})
+    .then(renderArticles)
+    .catch(()=>renderArticles({articles:[],updated_at:null}));
+  const noteKey='creativeLibraryNotesV1';
+  const storedNotes=safeGet(noteKey,[]);
+  let notes=(Array.isArray(storedNotes)?storedNotes:[]).filter(n=>n&&typeof n==='object'&&typeof n.title==='string'&&typeof n.body==='string');
+  function renderNotes(){
+    const grid=$('savedNotes');grid.replaceChildren();
+    for(const note of notes.slice().reverse()){
+      const card=make('article','note-card');
+      const del=make('button','delete-note','Delete');del.type='button';del.setAttribute('aria-label',`Delete note ${note.title}`);
+      del.addEventListener('click',()=>{if(confirm(`Delete the note “${note.title}”?`)){notes=notes.filter(n=>n.id!==note.id);safeSet(noteKey,notes);renderNotes();}});
+      card.append(del);card.append(make('div','note-meta',dateFmt(note.created)));card.append(make('h3','',note.title));card.append(make('p','',note.body));grid.append(card);
+    }
+  }
+  $('saveNote').addEventListener('click',()=>{
+    const title=$('noteTitle').value.trim(),body=$('noteBody').value.trim();
+    if(!title||!body){$('noteStatus').textContent='Add a title and a few thoughts before saving.';return;}
+    const id=typeof crypto!=='undefined'&&crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random();
+    const candidate=[...notes,{id,title,body,created:new Date().toISOString()}];
+    if(!safeSet(noteKey,candidate)){$('noteStatus').textContent='Could not save to this browser. Export your text instead.';return;}
+    notes=candidate;$('noteTitle').value='';$('noteBody').value='';$('noteStatus').textContent='Saved on this device.';renderNotes();
+  });
+  $('exportNotes').addEventListener('click',()=>{
+    if(!notes.length){$('noteStatus').textContent='There are no saved notes to export yet.';return;}
+    const content=['THE CREATIVE LIBRARY — FIELD NOTES',''].concat(notes.flatMap(n=>[n.title, dateFmt(n.created), '',n.body,'','---',''])).join('\n');
+    const blob=new Blob([content],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob);
+    const a=make('a');a.href=url;a.download='creative-library-field-notes.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);
+    $('noteStatus').textContent='Notes exported as a text file.';
+  });
+  renderNotes();
+})();
+
+</script>
+</body>
+</html>
