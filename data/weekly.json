@@ -1,39 +1,63 @@
 {
-  "updated_at": "2026-11-02T15:08:55.488332+00:00",
+  "updated_at": "2026-11-09T15:10:25.332747+00:00",
   "source_count": 5,
   "source_status": "partial",
   "articles": [
     {
-      "title": "OHLAB experiments with colour-blocking and cork in old and new buildings of Terreno Barrio Hotel in Mallorca",
-      "summary": "Mallorca-based architecture and interiors studio OHLAB has overseen the design of a hotel in Palma, including a renovated heritage building from 1935 and a new structure built from cross-laminated timber and cork. The 41-room Terreno Barrio Hotel was envisioned as \"a catalyst for",
-      "url": "https://www.dezeen.com/2026/10/27/ohlab-experiments-with-colour-blocking-and-cork-in-old-and-new-buildings-of-terreno-barrio-hotel-in-mallorca/",
-      "source": "Dezeen",
+      "title": "Populus / Studio Gang",
+      "summary": "Studio Gang, the international architecture and urban design firm led by Jeanne Gang, has completed Populus, a 265-room hotel poised to become a new social center for downtown Denver . Marking Studio Gang's first completed project in Colorado and the American Southwest region, Po",
+      "url": "https://www.archdaily.com/1031563/populus-hotel-and-social-hub-studio-gang",
+      "source": "ArchDaily",
       "category": "Architecture",
-      "published": "2026-10-27T09:30:00+00:00"
+      "published": "2026-11-08T15:00:00+00:00"
     },
     {
-      "title": "chromatic pavilions and modular play structures activate historic istanbul rami library",
-      "summary": "milimetrik architects transforms the courtyard and interiors of istanbul's historic rami library into a 91,000 sqm environment for play and shared family experiences, welcoming approximately 825,000 visitors in eleven days. The post chromatic pavilions and modular play structures",
-      "url": "https://www.designboom.com/architecture/chromatic-pavilions-modular-play-structures-historic-istanbul-rami-library-milimetrik-architects/",
+      "title": "House with Ghost Roof and Garden / OOOarchitecture",
+      "summary": "This wooden family home is located in a residential neighborhood in Inage Ward, Chiba City, Japan. The design is organized around an L-shaped, single-story plan that embraces a central garden. Rather than serving merely as an ancillary outdoor space, the garden forms the heart of",
+      "url": "https://www.archdaily.com/1187591/house-with-ghost-roof-and-garden-oooarchitecture",
+      "source": "ArchDaily",
+      "category": "Architecture",
+      "published": "2026-11-09T02:00:00+00:00"
+    },
+    {
+      "title": "House with Forest Windows / Yosuke Tomiya Architectural Design",
+      "summary": "House with Forest Windows is a compact timber residence in Sapporo , Hokkaido, located where an ordinary suburban neighborhood meets a dense woodland. The site offered an unusual condition: while neighboring houses stand close on the street side, the rear of the property opens di",
+      "url": "https://www.archdaily.com/1186270/house-with-forest-windows-yosuke-tomiya-architectural-design",
+      "source": "ArchDaily",
+      "category": "Architecture",
+      "published": "2026-11-07T17:00:00+00:00"
+    },
+    {
+      "title": "raw concrete and steel anchor stripped-back 1960’s apartment in zagreb",
+      "summary": "simple architecture approaches the renovation through subtraction rather than addition, stripping the apartment back to its raw state. The post raw concrete and steel anchor stripped-back 1960’s apartment in zagreb appeared first on designboom | architecture & design magazine .",
+      "url": "https://www.designboom.com/architecture/raw-concrete-steel-stripped-back-1960s-apartment-zagreb-simple-architecture/",
       "source": "designboom",
       "category": "Design",
-      "published": "2026-10-31T21:35:23+00:00"
+      "published": "2026-11-08T08:45:41+00:00"
     },
     {
-      "title": "How Surface Materials Shape Contemporary Interiors",
-      "summary": "Whether in residential interiors, workplaces, hospitality environments, or public spaces, the relationship between aesthetic intentions and technical performance can redefine how surfaces are used and how they perform. A material selected for its specific color, texture, or finis",
-      "url": "https://www.archdaily.com/1187572/how-surface-materials-shape-contemporary-interiors",
-      "source": "ArchDaily",
-      "category": "Architecture",
-      "published": "2026-11-02T05:45:00+00:00"
+      "title": "SMALLrevolution’s traceable recycling takes second in designboom special prize at seoul design award",
+      "summary": "recycled aircraft safety strips become furniture that retains its glow, making the material’s previous life visible. The post SMALLrevolution’s traceable recycling takes second in designboom special prize at seoul design award appeared first on designboom | architecture & design ",
+      "url": "https://www.designboom.com/design/smallrevolution-traceable-recycling-furniture-seoul-design-award-2026-special-prize/",
+      "source": "designboom",
+      "category": "Design",
+      "published": "2026-11-09T10:21:15+00:00"
     },
     {
-      "title": "Hotel Casa Cuenca / Taller Ivan Esqueda + Gala Sánchez-Renero Estudio + Mara Sánchez-Renero",
-      "summary": "Casa Cuenca is a ten-room boutique hotel located in the Condesa neighborhood of Mexico City.",
-      "url": "https://www.archdaily.com/1187900/hotel-casa-cuenca-taller-ivan-esqueda-plus-gala-sanchez-renero-estudio-plus-mara-sanchez-renero",
-      "source": "ArchDaily",
+      "title": "SOM unveils design for luxury waterfront development on Australian pier",
+      "summary": "International architecture studio SOM is set to transform a historic pier in Geelong, Victoria, into a waterfront destination culminating in a rounded high-rise. The post SOM unveils design for luxury waterfront development on Australian pier appeared first on Dezeen .",
+      "url": "https://www.dezeen.com/2026/11/04/cunningham-pier-development-som-australia/",
+      "source": "Dezeen",
       "category": "Architecture",
-      "published": "2026-11-01T15:00:00+00:00"
+      "published": "2026-11-04T10:00:00+00:00"
+    },
+    {
+      "title": "Holst completes Adjaye-designed mass-timber library in Oregon",
+      "summary": "US architecture studio Holst has created a mass-timber library in Oregon with a series of tall columns at the entrance and a central atrium, a project taken over from Adjaye Associates. The post Holst completes Adjaye-designed mass-timber library in Oregon appeared first on Dezee",
+      "url": "https://www.dezeen.com/2026/11/03/holst-completes-adjaye-designed-mass-timber-library-oregon/",
+      "source": "Dezeen",
+      "category": "Architecture",
+      "published": "2026-11-03T15:33:02+00:00"
     },
     {
       "title": "Eight architecture and design events in November from Dezeen Events Guide",
@@ -44,36 +68,12 @@
       "published": "2026-11-02T08:00:00+00:00"
     },
     {
-      "title": "Konya Square Houses and Bicycle Museum Extension / Yalin Architectural Design",
-      "summary": "Konya Square Houses consists of 13 reinforced-concrete buildings constructed in 2005, drawing on the traditional Konya houses and neighborhood fabric that existed on the site until 1955. Over the years, the complex accommodated various non-governmental organizations and municipal",
-      "url": "https://www.archdaily.com/1187508/konya-square-houses-and-bicycle-museum-extension-yalin-architectural-design",
-      "source": "ArchDaily",
-      "category": "Architecture",
-      "published": "2026-10-31T21:00:00+00:00"
-    },
-    {
-      "title": "MVRDV designs Essen Central Library as public \"living room\" in Germany",
-      "summary": "Red bookshelves fill the multipurpose interiors of this city library, created by Dutch studio MVRDV in a former department store in Essen, in collaboration with German studio Meyer Architekten. The post MVRDV designs Essen Central Library as public \"living room\" in Germany appear",
-      "url": "https://www.dezeen.com/2026/10/27/mvrdv-essen-central-library/",
-      "source": "Dezeen",
-      "category": "Architecture",
-      "published": "2026-10-27T06:00:00+00:00"
-    },
-    {
-      "title": "aditya mandlik explores how water, worms and bees can reshape architecture",
-      "summary": "the mumbai-based architect explores how ecological gradients and non-human intelligence can transform design, shifting architecture from controlling nature to collaborating with it. The post aditya mandlik explores how water, worms and bees can reshape architecture appeared first",
-      "url": "https://www.designboom.com/architecture/aditya-mandlik-water-worms-bees-reshape-architecture-guest-essay/",
+      "title": "suspended cables and illuminated vending machines stand out in cevo’s japanese cityscape paintings",
+      "summary": "based on the artist’s own photographic research in japan, the works explore beauty in the mundane and solitude within densely populated cities. The post suspended cables and illuminated vending machines stand out in cevo’s japanese cityscape paintings appeared first on designboom",
+      "url": "https://www.designboom.com/art/suspended-cables-illuminated-vending-machines-cevo-japanese-cityscape-paintings-slow-drip/",
       "source": "designboom",
       "category": "Design",
-      "published": "2026-11-02T11:56:43+00:00"
-    },
-    {
-      "title": "how ecoLogicStudio uses living organisms to build better spaces for living",
-      "summary": "architecture need not exclude microbes: these projects use algae, fungi and bacteria as active parts of healthier living environments. The post how ecoLogicStudio uses living organisms to build better spaces for living appeared first on designboom | architecture & design magazine",
-      "url": "https://www.designboom.com/architecture/how-ecologicstudio-uses-living-organisms-to-build-better-spaces-for-living/",
-      "source": "designboom",
-      "category": "Design",
-      "published": "2026-11-01T21:45:07+00:00"
+      "published": "2026-11-08T21:35:00+00:00"
     }
   ]
 }
